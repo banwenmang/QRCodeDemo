@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/MatchMatch">
+
+    <LinearLayout
+        style="@style/MatchMatch.Vertical"
+        android:gravity="center_horizontal">
+
+        <include layout="@layout/toolbar"/>
+
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:gravity="center_horizontal">
+
+            <EditText
+                android:id="@+id/et_word_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="10dp"
+                android:hint="输入需生成二维码内容"
+                android:textColorHint="#6666"/>
+
+            <ImageView
+                android:id="@+id/iv_word_qrcode"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/holder"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/MatchWrap.Horizontal">
+
+            <TextView
+                style="@style/AutoWrapTv"
+                android:onClick="createWordQr"
+                android:text="生成二维码"/>
+
+            <TextView
+                style="@style/AutoWrapTv"
+                android:onClick="saveWordQr"
+                android:text="保存二维码"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MatchWrap.Horizontal"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/iv_show_pre"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/holder"/>
+
+            <ImageView
+                android:id="@+id/iv_show_qr"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/holder"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/MatchWrap.Horizontal">
+
+            <TextView
+                style="@style/AutoWrapTv"
+                android:onClick="chooseLogo"
+                android:text="选取logo创建二维码"/>
+
+            <TextView
+                style="@style/AutoWrapTv"
+                android:onClick="saveLogoQr"
+                android:text="保存二维码"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
